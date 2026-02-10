@@ -1,8 +1,8 @@
 CLAUDE.md for Butter & Crumble Preorder Bot
 Project Overview
-A Python-based automation tool designed to monitor the Butter and Crumble shop, wait for a specific drop time, and programmatically add items to the cart.
+A Python-based automation tool designed to monitor the Butter and Crumble shop (https://www.hotplate.com/butterandcrumble), wait for a specific drop time, and programmatically add items to the cart.
 
-Build & Setup Commands
+Build & Setup Commands1
 Install Dependencies: pip install playwright pytest-playwright
 
 Install Browser Binaries: playwright install chromium
