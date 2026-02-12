@@ -27,12 +27,11 @@ def test_page_has_content(page: Page) -> None:
     assert len(body_text) > 0
 
 
-@pytest.mark.skip(reason="Requires actual Order button to be present on page")
-def test_order_button_exists(page: Page) -> None:
-    """Test that an order button can be found."""
+def test_drop_cards_exist(page: Page) -> None:
+    """Test that drop cards can be found on the page."""
     page.goto("https://www.hotplate.com/butterandcrumble")
     page.wait_for_load_state("networkidle")
 
-    # This will need to be updated with the actual selector
-    order_button = page.locator('button:has-text("Order")')
-    expect(order_button).to_be_visible()
+    # Check that drop card containers exist
+    drop_cards = page.locator('.c-fixGjY.c-fixGjY-igxtwkj-css')
+    expect(drop_cards.first).to_be_visible(timeout=10000)
